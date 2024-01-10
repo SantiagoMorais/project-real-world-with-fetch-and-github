@@ -24,8 +24,6 @@ async function getUserData(userName) {
     user.setRepositories(repositoriesResponse);
     user.setEvents(eventsResponse);
 
-    console.log(user);
-
     screen.renderUser(user);
 }
 
