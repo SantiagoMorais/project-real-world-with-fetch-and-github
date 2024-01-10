@@ -195,7 +195,7 @@ main {
 }
 
 .container .profile-data .repositories ul li a {
-  padding: 20px;
+  padding: 15px;
   border: 1px solid grey;
   margin: 20px;
   display: block;
@@ -206,6 +206,20 @@ main {
 .container .profile-data .repositories ul li a:hover {
   background-color: hotpink;
   color: #fff
+}
+
+.repositories ul li a .repo-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.repositories ul li a .repo-data .data {
+  background-color: blueviolet;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: #fff;
 }
 
 .container .profile-data.hide {

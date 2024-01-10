@@ -19,10 +19,10 @@ const screen = {
         user.events.forEach(event => {
             const commits = event.payload.commits;
             if (event.type === "PushEvent" || event.type === "CreateEvent") {
-                eventsList += `<li>${event.actor.login}/${event.repo.name}  <span>- ${commits[commits.length -1].message}</span></li>`
+                eventsList += `<li>${event.actor.login}/${event.repo.name}  <span>- ${commits[commits.length - 1].message}</span></li>`
             }
         })
-        if (user.events.length > 0) {
+        if (eventsList) {
             this.userProfile.innerHTML += `
                 <div class="events">
                     <h2>Eventos</h2>
@@ -33,8 +33,21 @@ const screen = {
 
         let reposList = "";
         user.repositories.forEach(repo => {
-            reposList += `<li><a href="${repo.html_url}" target:"_blank">${repo.name}</a></li>`
+            reposList += `
+            <li>
+                <a href="${repo.html_url}" target="_blank">
+                    <p>${repo.name}</p>
+                    <div class="repo-data">
+                        <div class="data">🍴 ${repo.forks}</div>
+                        <div class="data">⭐ ${repo.stargazers_count}</div>
+                        <div class="data">👀 ${repo.watchers}</div>
+                        <div class="data">👨‍💻 ${repo.language ?? "-"}</div>
+                    </div>
+                </a>
+            </li>
+            `
         });
+
         if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `
                 <div class="repositories">
