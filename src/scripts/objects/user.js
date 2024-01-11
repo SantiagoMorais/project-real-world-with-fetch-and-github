@@ -5,10 +5,6 @@ const user = {
     login: "",
     followers: "",
     following: "",
-    repoForks: "",
-    repoStars: "",
-    repoWatchers: "",
-    repoLanguage: "",
     repositories: [],
     events: [],
     setInfo(gitHubUserData){
@@ -21,10 +17,6 @@ const user = {
     },
     setRepositories(gitHubUserRepos){
         this.repositories = gitHubUserRepos;
-        this.repoForks = gitHubUserRepos.forks;
-        this.repoStars= gitHubUserRepos.stargazers_count;
-        this.repoWatchers = gitHubUserRepos.watchers;
-        this.repoLanguage = gitHubUserRepos.language
     },
     setEvents(gitHubUserEvents) {
         this.events = gitHubUserEvents;

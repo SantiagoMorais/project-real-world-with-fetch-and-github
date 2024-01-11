@@ -18,8 +18,6 @@ async function getUserData(userName) {
         return
         }
         
-    console.log(repositoriesResponse);
-    
     user.setInfo(userResponse);
     user.setRepositories(repositoriesResponse);
     user.setEvents(eventsResponse);
