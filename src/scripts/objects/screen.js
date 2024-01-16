@@ -17,9 +17,12 @@ const screen = {
             `
         let eventsList = "";
         user.events.forEach(event => {
-            const commits = event.payload.commits;
             if (event.type === "PushEvent" || event.type === "CreateEvent") {
-                eventsList += `<li>${event.actor.login}/${event.repo.name}  <span>- ${commits[commits.length - 1].message}</span></li>`
+                const commits = event.payload.commits;
+                if (commits) {
+                    const lastCommit = event.payload.size - 1;
+                    eventsList += `<li>${event.actor.login}/${event.repo.name}  <span>- ${commits[lastCommit].message}</span></li>`
+                }
             }
         })
         if (eventsList) {
