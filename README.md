@@ -2,7 +2,7 @@
 
 Esse é um exercício do curso [DevQuest](https://www.linkedin.com/school/devquest-dev-em-dobro/about/) sobre a [API Rest do GitHub](https://docs.github.com/pt/rest?apiVersion=2022-11-28).
 
-<img src="src/screenshots/desing do projeto.bmp" alt="imagem do projeto">
+<img src="src/assets/screenshots/desing do projeto.bmp" alt="imagem do projeto">
 
 ## Sumário
 - [Visão Geral](#visão-geral)
@@ -34,7 +34,7 @@ Os usuários devem ser capazes de:
 
 ### Screenshot
 
-<img src="src/screenshots/funcionalidade-do-projeto.gif" alt="gif da funcionalidade do projeto">
+<img src="src/assets/screenshots/funcionalidade-do-projeto.gif" alt="gif da funcionalidade do projeto">
 
 **Funcionalidade do projeto**
 
@@ -54,7 +54,7 @@ Pude coletar dados da API do GitHub, além de ir mais a fundo ao coletar dados d
 
 Separei o arquivo de forma que fique organizado e que facilite a manutenção.
 
-<img src="src/screenshots/organização-do-projeto.bmp" alt="screenshot da organização do projeto">
+<img src="src/assets/screenshots/organização-do-projeto.bmp" alt="screenshot da organização do projeto">
 
 O arquivo index.js é responsável pela funcionalidade do projeto, ao adicionar os eventos de clique no botão e executar as funções que busca os dados do usuário digitado no input.
 
